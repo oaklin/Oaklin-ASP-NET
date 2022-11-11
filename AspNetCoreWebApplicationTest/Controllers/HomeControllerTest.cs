@@ -23,5 +23,5 @@ namespace AspNetCoreWebApplicationTest.Controllers
             Assert.Single(result.ViewData);
             Assert.Equal("We've encountered an error :(", result.ViewData["Message"]);
         }
-            }
+    }
 }
