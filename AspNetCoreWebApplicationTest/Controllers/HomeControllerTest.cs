@@ -12,7 +12,7 @@ namespace AspNetCoreWebApplicationTest.Controllers
             HomeController controller = new HomeController();
             ViewResult result = (ViewResult) controller.Index();
             Assert.Single(result.ViewData);
-            Assert.Equal("You just created a ASP.Net Core web application!", result.ViewData["Message"]);
+            Assert.Equal("You just created a ASP.Net Core web asd application!", result.ViewData["Message"]);
         }
 
         [Fact]
@@ -23,13 +23,5 @@ namespace AspNetCoreWebApplicationTest.Controllers
             Assert.Single(result.ViewData);
             Assert.Equal("We've encountered an error :(", result.ViewData["Message"]);
         }
-        
-        [Fact]
-        public void NoInputParamGetResponseTest()
-        {
-            HomeController controller = new HomeController();
-            var response = controller.Get().Value as Response;
-            Assert.Equal("Hello World!!!", response.output);
-        }
-    }
+            }
 }
